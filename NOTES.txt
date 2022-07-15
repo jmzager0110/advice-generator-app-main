@@ -1,0 +1,21 @@
+https://codepen.io/jmzager0110/pen/wvybzJv
+
+SVG TROUBLESHOOTING...
+
+<svg viewBox="0 0 448 512" width="100" title="bars">
+  <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+</svg>
+
+https://github.com/jmzager0110/image-store/blob/main/icon-dice.svg
+
+<button class="btn">
+	<svg width="2" height="1"> 
+		<image xlink:href="https://github.com/jmzager0110/image-store/blob/main/icon-dice.svg" x="0" y="0" width="" height="" />
+	</svg>
+</button>
+
+TODO:
+    Work on SVG images on HTML & CSS pages.
+    Does your url need to be formatted differently?
+    Does the 'image' tag require BOTH xlink:href & src?
+    Double check your styles applied to these, compare sizing.
