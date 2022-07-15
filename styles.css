@@ -9,10 +9,10 @@
 ::after {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
+/*Here, 100vh means that the initial body height will take 100% of the viewport height, whereas the use of min-height instead of height will let the body element grow even more if necessary.*/
 html,
 body {
     min-height: 100vh
@@ -20,15 +20,9 @@ body {
 
 body {
     font-family: "Manrope", sans-serif;
-    background-color: #1f2632;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: hsl(217, 19%, 24%);
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center
 }
 
@@ -37,23 +31,13 @@ img {
 }
 
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 40px 10px 60px 10px;
     text-align: center;
-    background-color: #323a49;
-    color: #cee3e9;
+    background-color: hsl(217, 19%, 38%);
     position: relative;
     border-radius: 0.35rem;
     width: 100%;
@@ -61,19 +45,20 @@ img {
     margin: 0 0.5rem;
     min-height: 300px;
     box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26);
-    -webkit-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26);
-    -moz-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.26)
 }
 
 .container .accent {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5ch;
-    color: #52ffa8
+    color: hsl(150, 100%, 66%);
 }
 
 .container .advice {
-    margin-block: 1rem
+    margin-block: 1rem;
+    color: hsl(193, 38%, 86%);
+    font-size: 28px;
+    padding: 20px;
 }
 
 .container .btn {
@@ -81,24 +66,35 @@ img {
     outline: none;
     padding: 20px;
     border-radius: 50%;
-    background-color: #52ffa8;
+    background-color: hsl(150, 100%, 66%);
     position: absolute;
-    bottom: -32px
+    bottom: -32px;
 }
 
 .container .btn:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 20px 1px #52ffa8;
-    -webkit-box-shadow: 0px 0px 20px 1px #52ffa8;
-    -moz-box-shadow: 0px 0px 20px 1px #52ffa8
+    box-shadow: 0px 0px 20px 1px hsl(150, 100%, 66%);
 }
+
+.divider img{
+    width: auto; 
+    height: 100%;
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 11px; text-align: center; 
+  }
+  
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
 
 @media (min-width: 500px) {
     .container {
-        padding: 40px 25px 60px 25px
-    }
-
-    .container>img {
-        content: url("../images/pattern-divider-desktop.svg")
+        padding: 40px 25px 60px 25px;
     }
 }
