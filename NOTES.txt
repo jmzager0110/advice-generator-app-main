@@ -1,21 +1,112 @@
 https://codepen.io/jmzager0110/pen/wvybzJv
 
-SVG TROUBLESHOOTING...
+Refactoring for Mobile:
+CSS px to rem, converted each px to rem, mobile shows more skewed. Reverted from this:
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
 
-<svg viewBox="0 0 448 512" width="100" title="bars">
-  <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
-</svg>
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --container-padding: 2.5rem 0.625rem 2.5rem 0.625rem;
 
-https://github.com/jmzager0110/image-store/blob/main/icon-dice.svg
+}
 
-<button class="btn">
-	<svg width="2" height="1"> 
-		<image xlink:href="https://github.com/jmzager0110/image-store/blob/main/icon-dice.svg" x="0" y="0" width="" height="" />
-	</svg>
-</button>
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-TODO:
-    Work on SVG images on HTML & CSS pages.
-    Does your url need to be formatted differently?
-    Does the 'image' tag require BOTH xlink:href & src?
-    Double check your styles applied to these, compare sizing.
+/*Here, 100vh means that the initial body height will take 100% of the viewport height, whereas the use of min-height instead of height will let the body element grow even more if necessary.*/
+html,
+body {
+    min-height: 100vh
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+img {
+    display: block
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: var(--container-padding);
+    background-color: var(--dark-grayish-blue);
+    text-align: center;
+    position: relative;
+    border-radius: 0.35rem;
+    width: 100%;
+    max-width: 31.25rem;
+    margin: 0 0.5rem;
+    min-height: 18.75rem;
+    box-shadow: 0.625rem 0.625rem 0.938rem 0.063rem var(--neon-green);
+}
+
+.container .accent {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+    color: var(--neon-green);
+}
+
+.container .advice {
+    margin-block: 1rem;
+    color: var(--light-cyan);
+    font-size: 1.75rem;
+    
+}
+
+.container .btn {
+    border: none;
+    outline: none;
+    padding: 1.25rem;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    position: absolute;
+    bottom: -2rem;
+}
+
+.container .btn:hover {
+    cursor: pointer;
+    box-shadow: 0rem 0rem 1.25rem 0.063rem var(--neon-green);
+}
+
+img .divider { 
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: var(--dark-blue);
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.75rem; text-align: center; 
+  }
+  
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
+
+@media (min-width: 500px) {
+    .container {
+        padding: var(--container-padding);
+    }
+}
