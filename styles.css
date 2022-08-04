@@ -46,10 +46,10 @@ img {
     position: relative;
     border-radius: 0.35rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     margin: 0 0.5rem;
-    min-height: 300px;
-    box-shadow: 10px 10px 15px 1px var(--grayish-blue);
+    min-height: 18.75rem;
+    box-shadow: 0.625rem 0.625rem  0.938rem 0.063rem var(--grayish-blue);
 }
 
 .container .accent {
@@ -62,23 +62,23 @@ img {
 .container .advice {
     margin-block: 1rem;
     color: var(--light-cyan);
-    font-size: 28px;
+    font-size: 1.75rem;
     
 }
 
 .container .btn {
     border: none;
     outline: none;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 50%;
     background-color: var(--neon-green);
     position: absolute;
-    bottom: -32px;
+    bottom: -2rem;
 }
 
 .container .btn:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 20px 1px var(--neon-green);
+    box-shadow: 0rem 0rem 1.25rem 0.063rem var(--neon-green);
 }
 
 img .divider { 
@@ -93,11 +93,11 @@ img .divider {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    font-size: 11px; 
+    font-size: 0.688rem; 
     color: darkcyan;
     text-align: center; 
     border-radius: 0.4rem;
-    box-shadow: 0px 0px 20px 1px var(--neon-green);
+    box-shadow: 0rem 0rem 1.25rem 0.063rem var(--neon-green);
   }
   
   .attribution a { 
@@ -105,7 +105,7 @@ img .divider {
      
   }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
     .container {
         padding: var(--container-padding);
     }
